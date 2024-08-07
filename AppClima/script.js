@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
             fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`)
                 .then(response => response.json())
                 .then(data => {
-                    if (data.cod === 200) {
+                    if (data.cod == 200) {
                         weatherInfo.innerHTML = `
                             <p>Ciudad: ${data.name}</p>
                             <p>Temperatura: ${data.main.temp} °C</p>
